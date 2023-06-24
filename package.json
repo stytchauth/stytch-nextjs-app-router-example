@@ -12,6 +12,8 @@
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
+    "@stytch/nextjs": "^2.0.0",
+    "@stytch/vanilla-js": "^0.9.2",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "next": "13.4.6",
