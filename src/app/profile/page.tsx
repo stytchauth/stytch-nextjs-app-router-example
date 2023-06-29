@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useStytchUser } from "@stytch/nextjs";
-import Profile from "src/components/Profile";
-import loadStytch from "lib/loadStytch";
+import Profile from "@/src/components/Profile";
+import loadStytch from "@/lib/loadStytch";
 
 export default function ProfilePage() {
   const { user, isInitialized } = useStytchUser();
