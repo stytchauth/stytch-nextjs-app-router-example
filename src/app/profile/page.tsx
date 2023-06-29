@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useStytchUser } from "@stytch/nextjs";
 import Profile from "@/src/components/Profile";
 import loadStytch from "@/lib/loadStytch";
+import { NextRequest } from "next/server";
 
 export default function ProfilePage() {
   const { user, isInitialized } = useStytchUser();
@@ -28,14 +29,14 @@ If the session authentication fails, for instance if a logged out user attempts 
 
 In this example, we authenticate the session JWT as it is more performant. Learn more at https://stytch.com/docs/sessions#session-tokens-vs-JWTs 
 */
-export async function fetch({ req }) {
+export async function fetch({ req }: { req: NextRequest; }) {
   const redirectRes = {
     redirect: {
       destination: "/",
       permanent: false,
     },
   };
-  const sessionJWT = req.cookies["stytch_session_jwt"];
+  const sessionJWT = req.cookies.get("stytch_session_jwt");
 
   if (!sessionJWT) {
     return redirectRes;
