@@ -3,12 +3,12 @@
 import React from "react";
 import { useStytch, useStytchSession, useStytchUser } from "@stytch/nextjs";
 
-/*
-The Profile component is shown to a user that is logged in.
-
-This component renders the full User and Session object for education. 
-
-This component also includes a log out button which is accomplished by making a method call to revoking the existing session
+/**
+ * The Profile component is shown to a user that is logged in.
+ * 
+ * This component renders the full User and Session object for education. 
+ * 
+ * This component also includes a log out button which is accomplished by making a method call to revoking the existing session
 */
 const Profile = () => {
   const stytch = useStytch();
