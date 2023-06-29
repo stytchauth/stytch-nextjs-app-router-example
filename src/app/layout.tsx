@@ -1,19 +1,17 @@
-import './globals.css';
+import "./globals.css";
 
-import { ReactNode } from 'react';
-import Header from '@/src/components/Header';
-import StytchProvider from '@/src/components/StychProvider';
+import { ReactNode } from "react";
+import Header from "@/src/components/Header";
+import StytchProvider from "@/src/components/StychProvider";
 
-export default function RootLayout({ children }: { children: ReactNode; }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <StytchProvider>
       <html lang="en">
         <body>
           <Header />
           <main>
-            <div className="container">
-              {children}
-            </div>
+            <div className="container">{children}</div>
           </main>
         </body>
       </html>

@@ -1,9 +1,7 @@
-
 import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
-
   return (
     <header>
       <Link className="header" href="/">

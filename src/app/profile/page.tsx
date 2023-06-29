@@ -29,7 +29,7 @@ If the session authentication fails, for instance if a logged out user attempts 
 
 In this example, we authenticate the session JWT as it is more performant. Learn more at https://stytch.com/docs/sessions#session-tokens-vs-JWTs 
 */
-export async function fetch({ req }: { req: NextRequest; }) {
+export async function fetch({ req }: { req: NextRequest }) {
   const redirectRes = {
     redirect: {
       destination: "/",
