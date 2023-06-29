@@ -1,4 +1,4 @@
-'use effect';
+'use client';
 
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -23,8 +23,6 @@ const Authenticate = () => {
 
   useEffect(() => {
     if (stytch && !user && isInitialized) {
-      // const stytch_token_type = router?.query?.stytch_token_type?.toString();
-      // const token = router?.query?.token?.toString();
       const token = searchParams.get('token');
       const stytch_token_type = searchParams.get('stytch_token_type');
 
