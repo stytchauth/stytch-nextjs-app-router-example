@@ -36,7 +36,7 @@ const Authenticate = () => {
         });
       }
     }
-  }, [isInitialized, router, stytch, user]);
+  }, [isInitialized, router, searchParams, stytch, user]);
 
   useEffect(() => {
     if (!isInitialized) {
