@@ -1,3 +1,5 @@
+'use effect';
+
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useStytchUser, useStytch } from "@stytch/nextjs";
