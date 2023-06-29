@@ -1,19 +1,12 @@
-'use client';
-
 import './globals.css';
-import { StytchProvider } from "@stytch/nextjs";
-import { createStytchUIClient } from "@stytch/nextjs/ui";
+
 import { ReactNode } from 'react';
 import Header from '@/src/components/Header';
-
-// We initialize the Stytch client using our project's public token which can be found in the Stytch dashboard
-const stytch = createStytchUIClient(
-  process.env.NEXT_PUBLIC_STYTCH_PUBLIC_TOKEN || ''
-);
+import StytchProvider from '@/src/components/StychProvider';
 
 export default function RootLayout({ children }: { children: ReactNode; }) {
   return (
-    <StytchProvider stytch={stytch}>
+    <StytchProvider>
       <html lang="en">
         <body>
           <Header />
