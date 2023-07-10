@@ -5,20 +5,20 @@ const Header = () => {
   return (
     <header>
       <Link className="header" href="/">
-        <Image alt="sdf" src="logo.svg" width={190} height={200} />
+        <Image alt="sdf" src="logo.svg" width={190} height={200} priority={true} />
       </Link>
       <div className="link-container">
         <Link
           className="header"
           target="_blank"
-          href="https://www.stytch.com/docs"
+          href="https://www.stytch.com/docs/home"
         >
           Stytch Docs
         </Link>
         <Link
           className="header"
           target="_blank"
-          href="https://github.com/stytchauth/stytch-nextjs-example"
+          href="https://github.com/stytchauth/stytch-nextjs13-example"
         >
           <Image
             alt="Github"
