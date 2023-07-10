@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useStytchUser } from "@stytch/nextjs";
-import Profile from "src/components/Profile";
-import loadStytch from "lib/loadStytch";
+import Profile from "@/src/components/Profile";
+import loadStytch from "@/lib/loadStytch";
+import { NextRequest } from "next/server";
 
 export default function ProfilePage() {
   const { user, isInitialized } = useStytchUser();
@@ -20,22 +21,22 @@ export default function ProfilePage() {
   return <Profile />;
 }
 
-/*
-In this example ProfilePage is a protected route, meaning we only allow authenticated users to access this page.
-
-We enforce this server-side by authenticating the Stytch Session which the SDK stores and manages in browser cookies.
-If the session authentication fails, for instance if a logged out user attempts to go to localhost:3000/profile directly we redirect to the login page.
-
-In this example, we authenticate the session JWT as it is more performant. Learn more at https://stytch.com/docs/sessions#session-tokens-vs-JWTs 
+/**
+ * In this example ProfilePage is a protected route, meaning we only allow authenticated users to access this page.
+ * 
+ * We enforce this server-side by authenticating the Stytch Session which the SDK stores and manages in browser cookies.
+ * If the session authentication fails, for instance if a logged out user attempts to go to localhost:3000/profile directly we redirect to the login page.
+ * 
+ * In this example, we authenticate the session JWT as it is more performant. Learn more at https://stytch.com/docs/sessions#session-tokens-vs-JWTs 
 */
-export async function fetch({ req }) {
+export async function fetch({ req }: { req: NextRequest; }) {
   const redirectRes = {
     redirect: {
       destination: "/",
       permanent: false,
     },
   };
-  const sessionJWT = req.cookies["stytch_session_jwt"];
+  const sessionJWT = req.cookies.get("stytch_session_jwt");
 
   if (!sessionJWT) {
     return redirectRes;
