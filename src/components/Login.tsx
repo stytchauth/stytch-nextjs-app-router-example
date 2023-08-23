@@ -3,6 +3,7 @@
 import React from "react";
 import { StytchLogin } from "@stytch/nextjs";
 import { Products } from "@stytch/vanilla-js";
+import { getDomainFromWindow } from '../../lib/urlUtils';
 
 /*
  * Login configures and renders the StytchLogin component which is a prebuilt UI component for auth powered by Stytch
@@ -23,20 +24,18 @@ const Login = () => {
     },
   };
 
-  const REDIRECT_URL = "http://localhost:3000/authenticate";
-
   const config = {
     products: [Products.emailMagicLinks, Products.oauth],
     emailMagicLinksOptions: {
-      loginRedirectURL: REDIRECT_URL,
+      loginRedirectURL: getDomainFromWindow() + '/authenticate',
       loginExpirationMinutes: 60,
-      signupRedirectURL: REDIRECT_URL,
+      signupRedirectURL: getDomainFromWindow() + '/authenticate',
       signupExpirationMinutes: 60,
     },
     oauthOptions: {
       providers: [{ type: "google" }],
-      loginRedirectURL: REDIRECT_URL,
-      signupRedirectURL: REDIRECT_URL,
+      loginRedirectURL: getDomainFromWindow() + '/authenticate',
+      signupRedirectURL: getDomainFromWindow() + '/authenticate',
     },
   } as Parameters<typeof StytchLogin>[0]["config"];
 
