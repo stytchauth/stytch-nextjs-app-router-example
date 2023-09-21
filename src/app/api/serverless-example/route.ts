@@ -10,6 +10,8 @@ const stytchClient = new stytch.Client({
 });
 
 export async function GET(request: NextRequest, response: NextResponse) {
+  console.log(request.cookies.get('stytch_session')?.value);
+  await new Promise(r => setTimeout(r, 2000));
   try {
     const response = await stytchClient.sessions.authenticate({
       session_token: request.cookies.get('stytch_session')?.value,
