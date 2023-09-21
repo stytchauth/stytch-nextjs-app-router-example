@@ -9,9 +9,7 @@ const stytchClient = new stytch.Client({
   env: process.env.STYTCH_PROJECT_ENV === 'live' ? stytch.envs.live : stytch.envs.test,
 });
 
-export async function GET(request: NextRequest, response: NextResponse) {
-  console.log(request.cookies.get('stytch_session')?.value);
-  await new Promise(r => setTimeout(r, 2000));
+export async function GET(request: NextRequest) {
   try {
     const response = await stytchClient.sessions.authenticate({
       session_token: request.cookies.get('stytch_session')?.value,
