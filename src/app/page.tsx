@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useStytchUser } from "@stytch/nextjs";
-import Login from "@/src/components/Login";
+import LoginWithSlack from "@/src/components/LoginWithSlack";
 
 export default function LoginPage() {
   const { user, isInitialized } = useStytchUser();
@@ -15,5 +15,5 @@ export default function LoginPage() {
     }
   }, [user, isInitialized, router]);
 
-  return <Login />;
+  return <LoginWithSlack />;
 }
