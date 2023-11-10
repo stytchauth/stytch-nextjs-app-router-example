@@ -25,9 +25,15 @@ const Login = () => {
   };
 
   const config = {
-    products: [Products.oauth],
+    products: [Products.emailMagicLinks, Products.oauth],
+    emailMagicLinksOptions: {
+      loginRedirectURL: getDomainFromWindow() + '/authenticate',
+      loginExpirationMinutes: 60,
+      signupRedirectURL: getDomainFromWindow() + '/authenticate',
+      signupExpirationMinutes: 60,
+    },
     oauthOptions: {
-      providers: [{ type: "slack" }],
+      providers: [{ type: "google" }],
       loginRedirectURL: getDomainFromWindow() + '/authenticate',
       signupRedirectURL: getDomainFromWindow() + '/authenticate',
     },
