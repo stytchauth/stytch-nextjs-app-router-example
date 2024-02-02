@@ -79,7 +79,7 @@ This example app showcases a small portion of what you can accomplish with Stytc
 1. Add additional login methods like [Passwords](https://stytch.com/docs/guides/passwords/sdk).
 2. Replace the prebuilt UI with your own using by using the SDK's [headless methods](https://stytch.com/docs/sdks/javascript-sdk).
 3. Replace the Google OAuth button with the high converting [Google One Tap UI](https://stytch.com/docs/guides/oauth/sdk).
-4. Secure your app further by building MFA authentication using methods like [WebAuthn](https://stytch.com/docs/sdks/javascript-sdk/webauthn).``
+4. Secure your app further by building MFA authentication using methods like [WebAuthn](https://stytch.com/docs/sdks/javascript-sdk/webauthn).
 
 ## Get help and join the community
 
