@@ -1,7 +1,7 @@
 # Stytch Next.js App Router example application
 
 <p align="center">
-  <img src="https://github.com/stytchauth/stytch-nextjs-app-router-example/assets/159091081/c95d5fbd-24e0-4c02-a717-98b5f0cbd6ff" width="880">
+  <img src="https://github.com/stytchauth/stytch-nextjs-app-router-example/assets/159091081/49d93c38-e68c-4709-b54a-afa871d5e3a4" width="880">
 </p>
 
 ## Overview
