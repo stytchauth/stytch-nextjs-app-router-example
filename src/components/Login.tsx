@@ -25,7 +25,7 @@ const Login = () => {
   };
 
   const config = {
-    products: [Products.emailMagicLinks, Products.oauth],
+    products: [Products.emailMagicLinks, Products.oauth, Products.otp],
     emailMagicLinksOptions: {
       loginRedirectURL: getDomainFromWindow() + '/authenticate',
       loginExpirationMinutes: 60,
@@ -36,6 +36,10 @@ const Login = () => {
       providers: [{ type: "google" }],
       loginRedirectURL: getDomainFromWindow() + '/authenticate',
       signupRedirectURL: getDomainFromWindow() + '/authenticate',
+    },
+    otpOptions: {
+      methods: ["sms"],
+      expirationMinutes: 10,
     },
   } as Parameters<typeof StytchLogin>[0]["config"];
 

@@ -8,7 +8,7 @@ const OAUTH_TOKEN = "oauth";
 const MAGIC_LINKS_TOKEN = "magic_links";
 
 /**
- * During both the Magic link and OAuth flow, Stytch will redirect the user back to your application to a specified redirect URL (see Login.js).
+ * During both the Magic link and OTP flows, Stytch will redirect the user back to your application to a specified redirect URL (see Login.tsx).
  * Stytch will append query parameters to the redirect URL which are then used to complete the authentication flow.
  * A redirect URL for this example app will look something like: http://localhost:3000/authenticate?stytch_token_type=magic_links&token=abc123
  *
@@ -25,6 +25,8 @@ const Authenticate = () => {
     if (stytch && !user && isInitialized) {
       const token = searchParams.get("token");
       const stytch_token_type = searchParams.get("stytch_token_type");
+      const code = searchParams.get("code");
+      const method_id = searchParams.get("method_id");
 
       if (token && stytch_token_type === OAUTH_TOKEN) {
         stytch.oauth.authenticate(token, {
@@ -32,6 +34,10 @@ const Authenticate = () => {
         });
       } else if (token && stytch_token_type === MAGIC_LINKS_TOKEN) {
         stytch.magicLinks.authenticate(token, {
+          session_duration_minutes: 60,
+        });
+      } else if (code && method_id) {
+        stytch.otps.authenticate(code, method_id, {
           session_duration_minutes: 60,
         });
       }
