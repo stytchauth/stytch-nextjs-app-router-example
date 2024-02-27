@@ -1,7 +1,7 @@
 # Stytch Next.js App Router example application
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/100632220/217049841-b9eeb72a-3e50-4074-839a-e64ee5d4a88c.png" width="750">
+  <img src="https://github.com/stytchauth/stytch-nextjs-app-router-example/assets/159091081/9d4560c2-e0d3-4ca5-b9aa-59644ba01c13" width="750">
 </p>
 
 ## Overview
@@ -11,7 +11,7 @@ This example application demonstrates how one may use Stytch within a Next.js 13
 In Next.js 13's App Router, you may use both [Client](https://nextjs.org/docs/getting-started/react-essentials#client-components) and [Server](https://nextjs.org/docs/getting-started/react-essentials#server-components) components. **This example app primarily uses Client components, however you can see an example of a Server component in `/src/components/Authenticate.js`**. Our [Next.js SDK](https://stytch.com/docs/sdks/javascript-sdk) is compatible with Client components, so anywhere you use it, ensure that you include `'use client'` at the top of the component. If you'd like to use Server components, you may use our [Node Backend SDK](https://www.npmjs.com/package/stytch) to power your authentication flow.
 
 
-This application features Email Magic Links and Google OAuth authentication. You can use this application's source code as a learning resource, or use it as a jumping off point for your own project. We are excited to see what you build with Stytch!
+This application features Email Magic Links, Google OAuth, and SMS OTP authentication. You can use this application's source code as a learning resource, or use it as a jumping off point for your own project. We are excited to see what you build with Stytch!
 
 ## Set up
 
@@ -70,7 +70,7 @@ npm run dev
 
 The application will be available at [`http://localhost:3000`](http://localhost:3000).
 
-You'll be able to login with Email Magic Links or Google OAuth and see your Stytch User object, Stytch Session, and see how logging out works.
+You'll be able to login with Email Magic Links, Google OAuth, or SMS OTP and see your Stytch User object, Stytch Session, and see how logging out works.
 
 ## Next steps
 
@@ -80,6 +80,7 @@ This example app showcases a small portion of what you can accomplish with Stytc
 2. Replace the prebuilt UI with your own using by using the SDK's [headless methods](https://stytch.com/docs/sdks/javascript-sdk).
 3. Replace the Google OAuth button with the high converting [Google One Tap UI](https://stytch.com/docs/guides/oauth/sdk).
 4. Secure your app further by building MFA authentication using methods like [WebAuthn](https://stytch.com/docs/sdks/javascript-sdk/webauthn).
+5. Extend OTP options to [Email](https://stytch.com/docs/sdks/javascript-sdk/one-time-passcodes#send-via-email) or [WhatsApp](https://stytch.com/docs/sdks/javascript-sdk/one-time-passcodes#send-via-whatsapp).
 
 ## Get help and join the community
 
