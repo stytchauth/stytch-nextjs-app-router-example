@@ -36,10 +36,8 @@ In your terminal clone the project and install dependencies:
 ```bash
 git clone https://github.com/cal-stytch/stytch-nextjs13-example.git
 cd stytch-nextjs13-example
-# Install dependencies, you may use either pnpm or npm.
+# Install dependencies, using pnpm.
 pnpm i
-# or
-npm i
 ```
 
 Next, create `.env.local` file by running the command below which copies the contents of `.env.template`.
@@ -64,8 +62,6 @@ After completing all the set up steps above the application can be run with the 
 
 ```bash
 pnpm run dev
-# or
-npm run dev
 ```
 
 The application will be available at [`http://localhost:3000`](http://localhost:3000).

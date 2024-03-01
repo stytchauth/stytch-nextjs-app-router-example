@@ -22,13 +22,13 @@ const Authenticate = () => {
   const stytch = useStytch();
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [otp, setOtp] = useState('');
+  const [methodID, setMethodID] = useState('');
 
   useEffect(() => {
     if (stytch && !user && isInitialized) {
       const token = searchParams.get("token");
       const stytch_token_type = searchParams.get("stytch_token_type");
-      const [otp, setOtp] = useState('');
-      const [methodID, setMethodID] = useState('');
 
       if (token && stytch_token_type === OAUTH_TOKEN) {
         stytch.oauth.authenticate(token, {
