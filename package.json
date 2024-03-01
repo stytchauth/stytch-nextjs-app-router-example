@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@stytch/nextjs": "^9.0.0",
-    "@stytch/vanilla-js": "^2.0.1",
+    "@stytch/nextjs": "^9.0.1",
+    "@stytch/vanilla-js": "^2.2.2",
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",

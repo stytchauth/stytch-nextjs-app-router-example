@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useStytchUser, useStytch } from "@stytch/nextjs";
 
@@ -8,12 +8,14 @@ const OAUTH_TOKEN = "oauth";
 const MAGIC_LINKS_TOKEN = "magic_links";
 
 /**
- * During both the Magic link and OTP flows, Stytch will redirect the user back to your application to a specified redirect URL (see Login.tsx).
+ * During both the Magic link and OAuth flows, Stytch will redirect the user back to your application to a specified redirect URL (see Login.tsx).
  * Stytch will append query parameters to the redirect URL which are then used to complete the authentication flow.
  * A redirect URL for this example app will look something like: http://localhost:3000/authenticate?stytch_token_type=magic_links&token=abc123
  *
  * The AuthenticatePage will detect the presence of a token in the query parameters, and attempt to authenticate it.
- * On successful authentication, a session will be created and the user will be redirect to /profile
+ * Otherwise, during the OTP flow, the user-entered code will be handled by the SDK and passed to the authenticate call.
+ * 
+ * On successful authentication, a session will be created and the user will be redirect to /profile.
  */
 const Authenticate = () => {
   const { user, isInitialized } = useStytchUser();
@@ -25,8 +27,8 @@ const Authenticate = () => {
     if (stytch && !user && isInitialized) {
       const token = searchParams.get("token");
       const stytch_token_type = searchParams.get("stytch_token_type");
-      const code = searchParams.get("code");
-      const method_id = searchParams.get("method_id");
+      const [otp, setOtp] = useState('');
+      const [methodID, setMethodID] = useState('');
 
       if (token && stytch_token_type === OAUTH_TOKEN) {
         stytch.oauth.authenticate(token, {
@@ -36,8 +38,8 @@ const Authenticate = () => {
         stytch.magicLinks.authenticate(token, {
           session_duration_minutes: 60,
         });
-      } else if (code && method_id) {
-        stytch.otps.authenticate(code, method_id, {
+      } else {
+        stytch.otps.authenticate(otp, methodID, {
           session_duration_minutes: 60,
         });
       }
