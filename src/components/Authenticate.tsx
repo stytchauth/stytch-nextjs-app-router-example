@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useStytchUser, useStytch } from "@stytch/nextjs";
 
@@ -13,7 +13,6 @@ const MAGIC_LINKS_TOKEN = "magic_links";
  * A redirect URL for this example app will look something like: http://localhost:3000/authenticate?stytch_token_type=magic_links&token=abc123
  *
  * The AuthenticatePage will detect the presence of a token in the query parameters, and attempt to authenticate it.
- * Otherwise, during the OTP flow, the user-entered code will be handled by the SDK and passed to the authenticate call.
  * 
  * On successful authentication, a session will be created and the user will be redirect to /profile.
  */
@@ -22,8 +21,6 @@ const Authenticate = () => {
   const stytch = useStytch();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [otp, setOtp] = useState('');
-  const [methodID, setMethodID] = useState('');
 
   useEffect(() => {
     if (stytch && !user && isInitialized) {
@@ -36,10 +33,6 @@ const Authenticate = () => {
         });
       } else if (token && stytch_token_type === MAGIC_LINKS_TOKEN) {
         stytch.magicLinks.authenticate(token, {
-          session_duration_minutes: 60,
-        });
-      } else {
-        stytch.otps.authenticate(otp, methodID, {
           session_duration_minutes: 60,
         });
       }
