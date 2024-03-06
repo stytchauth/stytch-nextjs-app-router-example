@@ -8,7 +8,7 @@ import { useStytch, useStytchSession, useStytchUser } from "@stytch/nextjs";
  * 
  * This component renders the full User and Session object for education. 
  * 
- * This component also includes a log out button which is accomplished by making a method call to revoking the existing session
+ * This component also includes a log out button which is accomplished by making a method call to revoking the existing session.
 */
 const Profile = () => {
   const stytch = useStytch();
@@ -35,7 +35,7 @@ const Profile = () => {
         <span className="code">stytch_session</span> and{" "}
         <span className="code">stytch_session_jwt</span> respectively.
       </p>
-      {/* Revoking the session results in the session being revoked and cleared from browser storage. The user will return to Login.js */}
+      {/* Revoking the session results in the session being revoked and cleared from browser storage. The user will return to Login.js. */}
       <button className="primary" onClick={() => stytch.session.revoke()}>
         Log out
       </button>

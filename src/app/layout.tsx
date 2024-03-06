@@ -8,10 +8,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <StytchProvider>
       <html lang="en">
-        <title>Stytch Next.js 13 Example</title>
+        <title>Stytch Next.js App Router Example</title>
         <meta
           name="description"
-          content="An example Next.js 13 application using Stytch for authentication"
+          content="An example Next.js App Router application using Stytch for authentication"
         />
         <body>
           <Header />
