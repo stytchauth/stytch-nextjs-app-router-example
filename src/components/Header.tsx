@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <Link className="header" href="/">
-        <Image alt="sdf" src="logo.svg" width={190} height={200} priority={true} />
+        <Image alt="sdf" src="logo.svg" width={190} height={50} priority={true} />
       </Link>
       <div className="link-container">
         <Link
@@ -18,7 +18,7 @@ const Header = () => {
         <Link
           className="header"
           target="_blank"
-          href="https://github.com/stytchauth/stytch-nextjs13-example"
+          href="https://github.com/stytchauth/stytch-nextjs-app-router-example"
         >
           <Image
             alt="Github"
