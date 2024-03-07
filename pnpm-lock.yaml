@@ -1609,8 +1609,8 @@ packages:
       '@pkgjs/parseargs': 0.11.0
     dev: false
 
-  /jose@4.15.4:
-    resolution: {integrity: sha512-W+oqK4H+r5sITxfxpSU+MMdr/YSWGvgZMQDIsNoBDGGy4i7GBPTtvFKibQzW06n3U3TqHjhvBJsirShsEJ6eeQ==}
+  /jose@4.15.5:
+    resolution: {integrity: sha512-jc7BFxgKPKi94uOvEmzlSWFFe2+vASyXaKUpdQKatWAESU2MWjDfFf0fdfc83CDKcA5QecabZeNLyfhe3yKNkg==}
     dev: false
 
   /js-tokens@4.0.0:
@@ -2291,7 +2291,7 @@ packages:
     resolution: {integrity: sha512-/HMkJGNb/IjJC9dHh54JbUElLqFR3oEfuwIMQPLad63Ytkf9UKkd++fTVEJaMWmfIq8YIF5xfe9KLTr13JMDNQ==}
     engines: {node: '>= 18.0.0'}
     dependencies:
-      jose: 4.15.4
+      jose: 4.15.5
       undici: 5.28.3
     dev: false
 
