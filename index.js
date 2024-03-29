@@ -1,1 +1,0 @@
-require("@ampt/nextjs/entrypoint");
