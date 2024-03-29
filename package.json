@@ -3,24 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "ampt:build": "ampt-next build",
+    "ampt:dev": "next dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@stytch/nextjs": "^17.0.1",
-    "@stytch/vanilla-js": "^4.5.5",
-    "@types/node": "20.11.24",
-    "@types/react": "18.2.61",
-    "@types/react-dom": "18.2.19",
+    "@ampt/data": "^1.0.18",
+    "@ampt/nextjs": "^3.0.9",
+    "@ampt/sdk": "^1.0.14",
+    "@stytch/nextjs": "^18.0.0",
+    "@stytch/vanilla-js": "^4.7.5",
+    "@types/node": "20.11.30",
+    "@types/react": "18.2.73",
+    "@types/react-dom": "18.2.23",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.1.1",
-    "next": "13.4.6",
+    "eslint-config-next": "14.1.4",
+    "next": "14.1.4",
     "prettier": "^3.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "stytch": "^10.5.0",
-    "typescript": "5.3.3"
+    "stytch": "^10.11.0",
+    "typescript": "5.4.3"
   }
 }
