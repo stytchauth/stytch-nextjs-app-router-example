@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "ampt:build": "next build",
+    "ampt:build": "ampt-next build",
     "ampt:dev": "next dev",
     "dev": "next dev",
     "build": "next build",
