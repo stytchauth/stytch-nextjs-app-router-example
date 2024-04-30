@@ -1,1 +1,0 @@
-import '@ampt/nextjs/entrypoint'

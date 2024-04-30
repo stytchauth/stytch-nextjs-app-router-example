@@ -1,19 +1,14 @@
 {
-  "name": "stytch-nextjs-app-router-example",
+  "name": "stytch-not-a-bot-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "ampt:build": "ampt-next build",
-    "ampt:dev": "next dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@ampt/data": "^1.0.18",
-    "@ampt/nextjs": "^3.0.9",
-    "@ampt/sdk": "^1.0.14",
     "@stytch/nextjs": "^18.0.0",
     "@stytch/vanilla-js": "^4.7.5",
     "@types/node": "20.11.30",
@@ -35,10 +30,5 @@
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3"
-  },
-  "ampt": {
-    "org": "kold-stytch",
-    "app": "photo-ai-app"
-  },
-  "main": "entrypoint.mjs"
+  }
 }
