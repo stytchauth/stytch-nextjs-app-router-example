@@ -61,7 +61,7 @@ pnpm run dev
 
 The application will be available at [`http://localhost:3000`](http://localhost:3000).
 
-You'll be able to login with Email Magic Links, Google OAuth, or SMS OTP and see your Stytch User object, Stytch Session, and see how logging out works.
+You'll be able to login with Email Magic Links and see your Stytch User object, Stytch Session, and see how logging out works.
 
 ## Next steps
 
