@@ -29,7 +29,7 @@ Follow the steps below to get this application fully functional and running usin
 In your terminal clone the project and install dependencies:
 
 ```bash
-git clone https://github.com/cal-stytch/stytch-nextjs-app-router-example.git
+git clone https://github.com/stytchauth/stytch-nextjs-app-router-example.git
 cd stytch-nextjs-app-router-example
 # Install dependencies, using pnpm.
 pnpm i
