@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useStytchUser, useStytch } from "@stytch/nextjs";
+import { Suspense } from 'react'
 
 const MAGIC_LINKS_TOKEN = "magic_links";
 
@@ -15,7 +16,7 @@ const MAGIC_LINKS_TOKEN = "magic_links";
  *
  * On successful authentication, a session will be created and the user will be redirect to /profile.
  */
-const Authenticate = () => {
+const AuthenticateSuspense = () => {
   const { user, isInitialized } = useStytchUser();
   const stytch = useStytch();
   const router = useRouter();
@@ -46,4 +47,10 @@ const Authenticate = () => {
   return null;
 };
 
-export default Authenticate;
+export default function Authenticate() {
+  return (
+    <Suspense>
+      <AuthenticateSuspense />
+    </Suspense>
+  )
+}
