@@ -61,6 +61,21 @@ button.primary {
   border-radius: 4px;
 }
 
+button.secondary {
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  font-size: 18px;
+  color: rgb(25, 48, 61);
+  background-color: white;
+  border: 1px solid rgb(25, 48, 61);
+  border-radius: 4px;
+}
+
+button.secondary:hover {
+  background-color: #f5f5f5;
+}
+
 pre.code-block {
   max-height: 200px;
   width: 100%;
