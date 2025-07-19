@@ -43,7 +43,7 @@ const Profile = () => {
           className="secondary" 
           onClick={() => window.location.href = '/sessions'}
         >
-          Manage Sessions
+          List Sessions
         </button>
       </div>
     </div>
