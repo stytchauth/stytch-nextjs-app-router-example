@@ -37,7 +37,7 @@ export default async function SessionsList({ userId }: { userId: string }) {
     return (
       <div className="card">
         <h2>Active Sessions</h2>
-        <p>No active sessions found.</p>
+        <p>No active sessions found for your User.</p>
       </div>
     );
   }

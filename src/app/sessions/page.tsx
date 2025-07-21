@@ -44,7 +44,12 @@ export default async function SessionsPage() {
         </p>
       </div>
 
-      <Suspense fallback={<div className="card">Loading sessions...</div>}>
+      <Suspense fallback={
+        <div className="card">
+          <h2>Loading Sessions</h2>
+          <p>Fetching your active sessions...</p>
+        </div>
+      }>
         <SessionsList userId={userId} />
       </Suspense>
     </div>
