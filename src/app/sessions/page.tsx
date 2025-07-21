@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import SessionsList from "@/src/components/SessionsList";
+import loadBackendStytch from "@/lib/loadBackendStytch";
 
 // Server component to get user ID from cookies
 async function getUserIdFromSession(): Promise<string | null> {
@@ -13,7 +14,6 @@ async function getUserIdFromSession(): Promise<string | null> {
   }
 
   try {
-    const loadBackendStytch = (await import("@/lib/loadBackendStytch")).default;
     const stytch = loadBackendStytch();
     
     // Get session details to extract user ID
