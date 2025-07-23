@@ -35,10 +35,17 @@ const Profile = () => {
         <span className="code">stytch_session</span> and{" "}
         <span className="code">stytch_session_jwt</span> respectively.
       </p>
-      {/* Revoking the session results in the session being revoked and cleared from browser storage. The user will return to Login.js. */}
-      <button className="primary" onClick={() => stytch.session.revoke()}>
-        Log out
-      </button>
+      <div className="flex gap-4 mt-4">
+        <button className="primary" onClick={() => stytch.session.revoke()}>
+          Log out
+        </button>
+        <button 
+          className="secondary" 
+          onClick={() => window.location.href = '/sessions'}
+        >
+          List Sessions
+        </button>
+      </div>
     </div>
   );
 };
