@@ -70,7 +70,9 @@ button.secondary {
   background-color: white;
   border: 1px solid rgb(25, 48, 61);
   border-radius: 4px;
+  margin-top: 8px;
 }
+
 
 button.secondary:hover {
   background-color: #f5f5f5;
