@@ -11,7 +11,7 @@
   "dependencies": {
     "@stytch/nextjs": "^19.0.0",
     "@stytch/vanilla-js": "^4.11.2",
-    "@types/node": "20.11.24",
+    "@types/node": "20.19.33",
     "@types/react": "18.2.61",
     "@types/react-dom": "18.2.19",
     "eslint": "8.57.0",
