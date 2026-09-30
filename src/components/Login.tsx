@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { StytchLogin } from "@stytch/nextjs";
-import { Products } from "@stytch/vanilla-js";
+import { Products, StytchLogin } from "@stytch/nextjs";
 import { getDomainFromWindow } from '../../lib/urlUtils';
 
 /*
@@ -32,7 +31,7 @@ const Login = () => {
       signupRedirectURL: getDomainFromWindow() + '/authenticate',
       signupExpirationMinutes: 60,
     },
-  } as Parameters<typeof StytchLogin>[0]["config"];
+  } as React.ComponentProps<typeof StytchLogin>["config"];
 
   return <StytchLogin config={config} styles={styles} />;
 };
